@@ -10,7 +10,7 @@ const getBooks = require("./getBooks");
 
 const app = express();
 
-mongoose.connect("mongodb://localhost:27017/test", {
+mongoose.connect(process.env.MONGO_DB_KEY, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });

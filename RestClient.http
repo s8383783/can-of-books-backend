@@ -8,4 +8,18 @@ GET http://localhost:3001/books
 
 # /addseeds
 ###
-GET http://localhost:3001/addseeds
+GET http://localhost:3001/addseeds'
+
+
+# HEROKU /test
+###
+GET https://paperlouse-can-of-books.herokuapp.com/test
+
+#HEROKU /books
+###
+GET https://paperlouse-can-of-books.herokuapp.com/books 
+
+# HEROKU /addseeds
+###
+GET https://paperlouse-can-of-books.herokuapp.com/addseeds
+

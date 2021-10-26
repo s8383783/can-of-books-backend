@@ -10,8 +10,18 @@ const getBooks = require("./getBooks");
 
 const app = express();
 
+// Below is the key for MONGO_CONNECTION_STRING that links to the .env value for localhost:3001
 
-mongoose.connect(process.env.MONGO_CONNECTION_STRING, {
+// mongoose.connect(process.env.MONGO_CONNECTION_STRING,
+//   {
+//   useNewUrlParser: true,
+//   useUnifiedTopology: true,
+// });
+
+// Below is the key for our mongoDB that links to the .env value 
+
+mongoose.connect(process.env.MONGO_CONNECTION_STRINGS,
+  {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });

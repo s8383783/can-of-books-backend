@@ -25,10 +25,13 @@ mongoose.connect(process.env.MONGO_CONNECTION_STRINGS,
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
-
-const db = mongoose.connection;
-db.on("error", console.error.bind(console, "connection error"));
-db.once("open", () => console.log("Sucess!"));
+try {
+  const db = mongoose.connection;
+  db.on("error", console.error.bind(console, "connection error"));
+  db.once("open", () => console.log("Sucess!"));
+} catch (e) {
+  console.log("oops: ", e.message);
+}
 
 app.use(cors());
 

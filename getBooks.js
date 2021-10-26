@@ -1,4 +1,4 @@
-const BookModel = require("./bookmodel");
+const BookModel = require('./bookmodel');
 
 async function getBooks(req, res) {
   await BookModel.find((err, books) => {

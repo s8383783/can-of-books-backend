@@ -10,7 +10,8 @@ const getBooks = require("./getBooks");
 
 const app = express();
 
-mongoose.connect(process.env.MONGO_DB_KEY, {
+
+mongoose.connect(process.env.MONGO_CONNECTION_STRING, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
@@ -31,3 +32,5 @@ app.get("/addseeds", (request, response) => seed(request, response));
 app.get("/books", (req, res) => getBooks(req, res));
 
 app.listen(PORT, () => console.log(`listening on ${PORT}`));
+
+//mongodb+srv://bran2miz:Chanel1580!@cluster0.sh7hf.mongodb.net/Cluster0?retryWrites=true&w=majority

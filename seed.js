@@ -29,4 +29,5 @@ function seed(req, res) {
   });
   res.status(200).send("Database seeded");
 }
+
 module.exports = seed;

@@ -1,0 +1,11 @@
+
+# /Test Route
+GET http://localhost:3001/test
+
+# /books
+###
+GET http://localhost:3001/books
+
+# /addseeds
+###
+GET http://localhost:3001/addseeds

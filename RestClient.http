@@ -8,7 +8,7 @@ GET http://localhost:3001/books
 
 # /addseeds
 ###
-GET http://localhost:3001/addseeds'
+GET http://localhost:3001/addseeds
 
 
 # HEROKU /test

@@ -1,8 +1,8 @@
 "use strict";
 
-const BookModel = require("./bookmodel");
+const BookModel = require("../Schema/bookmodel");
 
-function seed(req, res) {
+function addSeeds(req, res) {
   const seedArr = [
     {
       title: "The Hobbit",
@@ -30,4 +30,4 @@ function seed(req, res) {
   res.status(200).send("Database seeded");
 }
 
-module.exports = seed;
+module.exports = addSeeds;

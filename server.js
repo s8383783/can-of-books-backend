@@ -6,7 +6,7 @@ const cors = require("cors");
 const addSeeds = require("./RouteHandlers/addSeeds");
 const getBooks = require("./RouteHandlers/getBooks");
 const home = require("./RouteHandlers/home");
-const sendBooks = require("./RouteHandlers/sendBooks");
+const postBooks = require("./RouteHandlers/postBooks");
 const clearDB = require("./RouteHandlers/clearDB");
 
 // Express Setup
@@ -42,8 +42,6 @@ app.get("/test", (req, res) => res.send("test request received"));
 app.get("/books", getBooks);
 
 app.post("/books", postBooks);
-
-app.post("/books", sendBooks);
 
 app.get("/addseeds", addSeeds);
 

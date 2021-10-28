@@ -1,11 +1,6 @@
 const BookModel = require("../Schema/bookmodel");
 
 async function getBooks(req, res) {
-  // const email = req.body.email;
-  // const emailBooks = await BookModel.find({ email: email });
-  // res.send(emailBooks);
-  // console.log(email);
-
   console.log("Get Books Request");
   try {
     await BookModel.find((err, books) => {

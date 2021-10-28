@@ -45,6 +45,6 @@ app.post("/books", postBooks);
 
 app.get("/addseeds", addSeeds);
 
-app.get("/clear", clearDB);
+app.delete("/clear", clearDB);
 
 app.get("*", (req, res) => res.status(404).send("We don't understand you."));

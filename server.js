@@ -10,8 +10,8 @@ const postBooks = require("./RouteHandlers/postBooks");
 const BookModel = require("./Schema/bookmodel");
 
 const app = express();
-app.use(cors());
 const PORT = process.env.PORT || 3001;
+app.use(cors());
 
 // MONGO/MONGOOSE CONNECTION
 // Comment out process.env variables with # in .env file to change paths

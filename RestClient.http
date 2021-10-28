@@ -6,6 +6,21 @@ GET http://localhost:3001/test
 ###
 GET http://localhost:3001/books
 
+###
+POST http://localhost:3001/books 
+
+###
+GET http://localhost:3001/clear
+
+
+# HTTP:1.1
+# Content-Type: application/json 
+
+# {
+#     email: 'gdfgd@yahoo.com'
+# }
+    
+
 # /addseeds
 ###
 GET http://localhost:3001/addseeds

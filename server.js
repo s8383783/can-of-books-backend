@@ -6,16 +6,20 @@ const cors = require("cors");
 const addSeeds = require("./RouteHandlers/addSeeds");
 const getBooks = require("./RouteHandlers/getBooks");
 const home = require("./RouteHandlers/home");
-const postBooks = require("./RouteHandlers/postBooks");
-const BookModel = require("./Schema/bookmodel");
+const sendBooks = require("./RouteHandlers/sendBooks");
+const clearDB = require("./RouteHandlers/clearDB");
 
+// Express Setup
 const app = express();
 const PORT = process.env.PORT || 3001;
+
+// Express permissions/setup
 app.use(cors());
+app.use(express.json());
 
 // MONGO/MONGOOSE CONNECTION
 // Comment out process.env variables with # in .env file to change paths
-mongoose.connect('mongodb://localhost:27017/', {
+mongoose.connect("mongodb://localhost:27017/", {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
@@ -36,18 +40,19 @@ app.get("/", home);
 app.get("/test", (req, res) => res.send("test request received"));
 
 app.get("/books", getBooks);
-app.post('/books', postBooks);
+app.post("/books", postBooks);
+
+app.post("/books", sendBooks);
 
 app.get("/addseeds", addSeeds);
 app.get("/clear", clearDB);
 app.get("*", (req, res) => res.status(404).send("We don't understand you."));
 
-async function clearDB (req, res) {
-  try{
-  await BookModel.deleteMany({}); 
-  res.send("DB cleared");
-  }
-  catch(error){
+async function clearDB(req, res) {
+  try {
+    await BookModel.deleteMany({});
+    res.send("DB cleared");
+  } catch (error) {
     res.status(500).send("Error");
   }
 }

@@ -40,19 +40,13 @@ app.get("/", home);
 app.get("/test", (req, res) => res.send("test request received"));
 
 app.get("/books", getBooks);
+
 app.post("/books", postBooks);
 
 app.post("/books", sendBooks);
 
 app.get("/addseeds", addSeeds);
-app.get("/clear", clearDB);
-app.get("*", (req, res) => res.status(404).send("We don't understand you."));
 
-async function clearDB(req, res) {
-  try {
-    await BookModel.deleteMany({});
-    res.send("DB cleared");
-  } catch (error) {
-    res.status(500).send("Error");
-  }
-}
+app.get("/clear", clearDB);
+
+app.get("*", (req, res) => res.status(404).send("We don't understand you."));

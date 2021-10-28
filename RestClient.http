@@ -1,29 +1,9 @@
-
 # /Test Route
 GET http://localhost:3001/test
 
 # /books
 ###
 GET http://localhost:3001/books
-
-###
-POST http://localhost:3001/books 
-
-###
-GET http://localhost:3001/clear
-
-
-# HTTP:1.1
-# Content-Type: application/json 
-
-# {
-#     email: 'gdfgd@yahoo.com'
-# }
-    
-
-# /addseeds
-###
-GET http://localhost:3001/addseeds
 
 ###
 # /POST books
@@ -37,7 +17,10 @@ Content-Type: application/json
   "email": "Fbaggins@shire.org"
 }
 
-
+#####################
+# /addseeds
+###
+GET http://localhost:3001/addseeds
 
 # HEROKU /test
 ###
@@ -58,4 +41,4 @@ GET https://paperlouse-can-of-books.herokuapp.com/addseeds
 ###########################################################
 # DELETE ALL
 ###
-DELETE http://localhost:3001/deleteAll
+DELETE http://localhost:3001/clear

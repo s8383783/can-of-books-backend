@@ -11,9 +11,9 @@ POST http://localhost:3001/books
 Content-Type: application/json
 
 {
-  "title": "Santa Eats Puppies",
-  "description": "A tale of santa eating puppies for Thanksgiving.",
-  "status": "Want so bad",
+  "title": "The Hobbit",
+  "description": "A story about some friends.",
+  "status": "Read",
   "email": "Fbaggins@shire.org"
 }
 

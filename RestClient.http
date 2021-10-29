@@ -34,11 +34,16 @@ DELETE http://localhost:3001/books/617b5a8161fc380cfd2d8b97?email=pigblood@yahoo
 ###
 GET http://localhost:3001/addseeds
 
+###########################################################
+# DELETE ALL
+###
+DELETE http://localhost:3001/clear
+
 # HEROKU /test ###########################################
 ###
 GET https://paperlouse-can-of-books.herokuapp.com/test
 
-#HEROKU /books
+#HEROKU GET /books
 ###
 GET https://paperlouse-can-of-books.herokuapp.com/books 
 
@@ -47,10 +52,18 @@ GET https://paperlouse-can-of-books.herokuapp.com/books
 GET https://paperlouse-can-of-books.herokuapp.com/addseeds
 
 
+# HEROKU POST NEW
+### /POST books
+POST https://paperlouse-can-of-books.herokuapp.com/books
+Content-Type: application/json
 
+{
+  "title": "SOMETHING NEW",
+  "description": "A story about a sandwich friends.",
+  "status": "Read",
+  "email": "HamSandwich@deli.com"
+}
 
-
-###########################################################
-# DELETE ALL
+# HEROKU DELETE ONE
 ###
-DELETE http://localhost:3001/clear
+DELETE https://paperlouse-can-of-books.herokuapp.com/books/6178732d6039d8dd99904a88

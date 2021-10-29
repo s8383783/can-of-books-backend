@@ -2,21 +2,21 @@
 const BookModel = require("../Schema/bookmodel");
 
 async function postBooks(req, res) {
+  const { title, description, status, email } = req.body;
   try {
     const Book = {
-      title: req.body.title,
-      description: req.body.description,
-      status: req.body.status,
-      email: req.body.email,
+      title: title,
+      description: description,
+      status: status,
+      email: email,
     };
     const bookEntry = BookModel(Book);
-    console.log(BookModel);
     bookEntry.save();
-    // console.log("body", req.body);
+    console.log("New Book Posted");
     res.status(200).json(Book);
   } catch (e) {
     console.log(e.message);
-    res.status(400).send("Bad Request");
+    res.status(400).send("You made a bad request", e.message);
   }
 }
 

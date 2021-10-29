@@ -1,9 +1,6 @@
 # /Test Route
 GET http://localhost:3001/test
 
-# /books
-###
-GET http://localhost:3001/books
 
 ###
 # /POST books
@@ -11,14 +8,29 @@ POST http://localhost:3001/books
 Content-Type: application/json
 
 {
-  "title": "Santa Eats Puppies",
-  "description": "A tale of santa eating puppies for Thanksgiving.",
-  "status": "Want so bad",
-  "email": "Fbaggins@shire.org"
+  "title": "SOMETHING NEW",
+  "description": "A story about a sandwich friends.",
+  "status": "Read",
+  "email": "HamSandwich@deli.com"
 }
 
+# /books
+### GET BOOKS
+GET http://localhost:3001/books
+
+### DELETE ONE BOOK
+DELETE http://localhost:3001/books/617b5a8161fc380cfd2d8b97?email=pigblood@yahoo.com&facts=potato
+
+#http://localhost:3001/books/{bookId}?email={email}
+
+#Fbaggins@shire.org
+
+
+
+
+
 #####################
-# /addseeds
+# /addseeds Sample Database Seeding
 ###
 GET http://localhost:3001/addseeds
 

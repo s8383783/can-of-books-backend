@@ -7,6 +7,7 @@ const addSeeds = require("./RouteHandlers/addSeeds");
 const getBooks = require("./RouteHandlers/getBooks");
 const home = require("./RouteHandlers/home");
 const postBooks = require("./RouteHandlers/postBooks");
+const deleteOne = require("./RouteHandlers/deleteOne");
 const clearDB = require("./RouteHandlers/clearDB");
 
 // Express Setup
@@ -39,12 +40,15 @@ app.get("/", home);
 
 app.get("/test", (req, res) => res.send("test request received"));
 
+// /books
 app.get("/books", getBooks);
-
 app.post("/books", postBooks);
+app.delete("/books/:id", deleteOne);
 
+// Seed Starter Pack
 app.get("/addseeds", addSeeds);
 
-app.get("/clear", clearDB);
+// Clear all
+app.delete("/clear", clearDB);
 
 app.get("*", (req, res) => res.status(404).send("We don't understand you."));

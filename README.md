@@ -18,6 +18,7 @@ REACTJS, JS, CSS
 
 ## Change Log
 
+10-28-2021 6:00pm - Delete Route added
 10-27-2021 11:00pm - Server Post Books route
 10-26-2021 5:00pm - Server side Refactor
 10-23-2021 3:41pm - Application backend and frontend are deployed.
@@ -53,6 +54,13 @@ Estimate of time needed to complete: 1 hour\
 Start time: 7:00pm\
 Finish time: 10:00pm\
 Actual time needed to complete: 3+hours
+
+### Delete Book Routing
+
+Estimate of time needed to complete: 1 hour\
+Start time: 5:00pm\
+Finish time: 6:00pm\
+Actual time needed to complete: 1 hour
 
 ## Credit and Collaborations
 

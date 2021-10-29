@@ -22,6 +22,12 @@ function addSeeds(req, res) {
       status: "hungry",
       email: "caterpillar@yahoo.com",
     },
+    {
+      title: "Lunch Time",
+      description: "A story about a sandwich.",
+      status: "Read",
+      email: "HamSandwich@deli.com",
+    },
   ];
   seedArr.forEach((seed) => {
     let entry = new BookModel(seed);

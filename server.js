@@ -20,7 +20,7 @@ app.use(express.json());
 
 // MONGO/MONGOOSE CONNECTION
 // Comment out process.env variables with # in .env file to change paths
-mongoose.connect("mongodb://localhost:27017/", {
+mongoose.connect(process.env.MONGO_CONNECTION_STRINGS, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });

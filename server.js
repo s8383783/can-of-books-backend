@@ -9,6 +9,7 @@ const home = require("./RouteHandlers/home");
 const postBooks = require("./RouteHandlers/postBooks");
 const deleteOne = require("./RouteHandlers/deleteOne");
 const clearDB = require("./RouteHandlers/clearDB");
+const putBooks = require("./RouteHandlers/putBooks");
 
 // Express Setup
 const app = express();
@@ -44,6 +45,7 @@ app.get("/test", (req, res) => res.send("test request received"));
 app.get("/books", getBooks);
 app.post("/books", postBooks);
 app.delete("/books/:id", deleteOne);
+app.put("/books/:id", putBooks);
 
 // Seed Starter Pack
 app.get("/addseeds", addSeeds);

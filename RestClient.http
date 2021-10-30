@@ -1,69 +1,55 @@
+
 # /Test Route
 GET http://localhost:3001/test
 
-
+# /books
 ###
-# /POST books
-POST http://localhost:3001/books 
+GET http://localhost:3001/books
+
+# /post
+###
+
+POST http://localhost:3001/books
 Content-Type: application/json
 
 {
-  "title": "SOMETHING NEW",
-  "description": "A story about a sandwich friends.",
-  "status": "Read",
-  "email": "HamSandwich@deli.com"
+  "title": "TEST3",
+  "description": "Hi harry",
+  "status": "wizard",
+  "email": "Cow@farm.com"
 }
 
-# /books
-### GET BOOKS
-GET http://localhost:3001/books
-
-### DELETE ONE BOOK
-DELETE http://localhost:3001/books/617b5a8161fc380cfd2d8b97?email=pigblood@yahoo.com&facts=potato
-
-#http://localhost:3001/books/{bookId}?email={email}
-
-#Fbaggins@shire.org
-
-
-
-
-
-#####################
-# /addseeds Sample Database Seeding
+# PUT BOOKS
 ###
-GET http://localhost:3001/addseeds
+PUT http://localhost:3001/books/617dbd7160e72f300bc8f655
+Content-Type: application/json
 
-###########################################################
-# DELETE ALL
-###
-DELETE http://localhost:3001/clear
+{
+  "title": "Harry Potter",
+  "description": "Hi harry",
+  "status": "wizard",
+  "email": "harrworld@hogwarts.com"
+}
 
-# HEROKU /test ###########################################
+
+
+
+
+
+
+
+
+
+
+
+# HEROKU /test
 ###
 GET https://paperlouse-can-of-books.herokuapp.com/test
 
-#HEROKU GET /books
+#HEROKU /books
 ###
 GET https://paperlouse-can-of-books.herokuapp.com/books 
 
 # HEROKU /addseeds
 ###
 GET https://paperlouse-can-of-books.herokuapp.com/addseeds
-
-
-# HEROKU POST NEW
-### /POST books
-POST https://paperlouse-can-of-books.herokuapp.com/books
-Content-Type: application/json
-
-{
-  "title": "SOMETHING NEW",
-  "description": "A story about a sandwich friends.",
-  "status": "Read",
-  "email": "HamSandwich@deli.com"
-}
-
-# HEROKU DELETE ONE
-###
-DELETE https://paperlouse-can-of-books.herokuapp.com/books/6178732d6039d8dd99904a88

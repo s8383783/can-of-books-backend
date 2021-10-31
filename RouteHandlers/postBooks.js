@@ -11,9 +11,16 @@ async function postBooks(req, res) {
       email: email,
     };
     const bookEntry = BookModel(Book);
-    bookEntry.save();
-    console.log("New Book Posted");
-    res.status(200).json(Book);
+    bookEntry.save((err, book) => {
+      if (err) {
+        console.log(err);
+      }
+      console.log(book._id);
+      res.status(200).json(book);
+    });
+
+    // console.log(recentUpdate);
+    // res.status(200).json(recentUpdate);
   } catch (e) {
     console.log(e.message);
     res.status(400).send("You made a bad request", e.message);

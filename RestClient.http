@@ -1,19 +1,18 @@
 
-# /Test Route
+# /Test 
 GET http://localhost:3001/test
 
-# /books
+# Get Books
 ###
 GET http://localhost:3001/books
 
-# /post
+# /post Book
 ###
-
 POST http://localhost:3001/books
 Content-Type: application/json
 
 {
-  "title": "TEST3",
+  "title": "Book1",
   "description": "Hi harry",
   "status": "wizard",
   "email": "Cow@farm.com"
@@ -33,7 +32,9 @@ Content-Type: application/json
 
 
 
-
+# CLEAR
+###
+DELETE http://localhost:3001/clear
 
 
 

@@ -52,6 +52,8 @@ Conflict Resolution
 
 **WhiteBoard Lab 13:** ![Whiteboard Image](./Images/whiteboard-lab-13.png)
 
+**WhiteBoard Lab 14** ![Whiteboard Image](./Images/whiteboard-lab-14.png)
+
 ## Architecture
 
 REACTJS, JS, CSS
@@ -97,6 +99,18 @@ Start time: Saturday 1:20 pm
 Finish time: Thursday 6:00 pm
 
 Actual time needed to complete: 5 hours
+
+## Lab 14 - Backend
+
+Name of feature: backend-lab-14-auth
+
+Estimate of time needed to complete: 3 hours
+
+Start time: Saturday 1:30 pm
+
+Finish time: Thursday 4:32 pm
+
+Actual time needed to complete: 3 hours
 
 ## Credit and Collaborations
 JP Jones

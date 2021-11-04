@@ -10,6 +10,9 @@ const postBooks = require("./RouteHandlers/postBooks");
 const deleteOne = require("./RouteHandlers/deleteOne");
 const clearDB = require("./RouteHandlers/clearDB");
 const putBooks = require("./RouteHandlers/putBooks");
+const getKey = require("./RouteHandlers/getKey.js");
+const jwt = require('jsonwebtoken');
+
 
 // Express Setup
 const app = express();
@@ -52,5 +55,18 @@ app.get("/addseeds", addSeeds);
 
 // Clear all
 app.delete("/clear", clearDB);
+
+// TEST
+app.get('/test', async (request, response) => {
+  const token = request.headers.authorization.split(' ')[1];
+
+  jwt.verify(token, getKey, {}, function (err, user) {
+    if (err) {
+      response.send('invalid token');
+    } else {
+      response.send(user);
+    }
+  });
+});
 
 app.get("*", (req, res) => res.status(404).send("We don't understand you."));

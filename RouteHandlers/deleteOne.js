@@ -9,8 +9,8 @@ async function deleteOne(request, response) {
       response.send('invalid token');
     } else {
       try {
-        await BookModel.findByIdAndDelete(request.params.id);
-        response.status(204).send('success')
+        let deleteBook = await BookModel.findByIdAndDelete(request.params.id);
+        response.status(204).send(deleteBook);
       } catch (error) {
         console.error.apply(error);
         response.status(500).send('server error')

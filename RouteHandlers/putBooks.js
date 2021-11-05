@@ -13,7 +13,7 @@ async function putBooks (req, res) {
       try{
         const id = req.params.id;
         const updatedBook = await BookModel.findByIdAndUpdate(id, req.body, {new: true});
-        response.send(updatedBook);
+        res.send(updatedBook);
       } catch (error) {
         console.error(error);
         res.status(400).send(`unable to update book ${id}`);

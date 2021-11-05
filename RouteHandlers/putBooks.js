@@ -12,7 +12,7 @@ async function putBooks (req, res) {
     } else{
       try{
         const id = req.params.id;
-        const updateBook = await BookModel.findByIdAndUpdate(id, req.body, {new: true});
+        const updatedBook = await BookModel.findByIdAndUpdate(id, req.body, {new: true});
         response.send(updatedBook);
       } catch (error) {
         console.error(error);

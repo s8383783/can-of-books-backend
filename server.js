@@ -16,7 +16,7 @@ const jwt = require('jsonwebtoken');
 
 // Express Setup
 const app = express();
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3003;
 
 // Express permissions/setup
 app.use(cors());
